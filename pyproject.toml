@@ -69,6 +69,11 @@ scripts.clean = "git clean -fdX -- {args:docs}"
 [tool.hatch.envs.hatch-test]
 features = [ "test" ]
 
+[tool.hatch.build.targets.sdist]
+only-include = [
+  "/src",
+]
+
 [tool.ruff]
 line-length = 120
 src = [ "src" ]
